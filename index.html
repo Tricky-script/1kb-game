@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clicker[releaes]</title>
+    <style>
+        #ball {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+        #clicks {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="ball"></div>
+    <div id="clicks">0</div>
+    <script>
+        var ball = document.getElementById('ball');
+        var clicks = 0;
+        var clicksDisplay = document.getElementById('clicks');
+
+        ball.addEventListener('click', function() {
+            clicks++;
+            clicksDisplay.textContent = clicks;
+        });
+    </script>
+</body>
+</html>
